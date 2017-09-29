@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.andryyu.eventdeliver.MyRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rl_event"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.andryyu.eventdeliver.MainActivity">
 
-    <com.andryyu.eventdeliver.MyButton
-        android:id="@+id/btn_event"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btn_test1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Hello World!" />
+        android:text="ViewGroup与View的事件传递" />
 
-</com.andryyu.eventdeliver.MyRelativeLayout>
+    <Button
+        android:id="@+id/btn_test2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ListView与ScrollView事件处理"/>
+
+    <Button
+        android:id="@+id/btn_test3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="viewPager简易实现"/>
+
+</LinearLayout>

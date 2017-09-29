@@ -1,4 +1,4 @@
-package com.andryyu.eventdeliver;
+package com.andryyu.eventdeliver.test1;
 
 import android.content.Context;
 import android.util.AttributeSet;

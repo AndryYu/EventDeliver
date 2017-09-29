@@ -1,38 +1,51 @@
 package com.andryyu.eventdeliver;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnTouchListener, View.OnClickListener {
+import com.andryyu.eventdeliver.test1.MyButton;
+import com.andryyu.eventdeliver.test1.MyRelativeLayout;
+import com.andryyu.eventdeliver.test1.Test1Activity;
+import com.andryyu.eventdeliver.test2.Test2Activity;
+import com.andryyu.eventdeliver.test3.Test3Activity;
 
-    private MyRelativeLayout myLayout;
-    private MyButton myButton;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private Button btnTest1;
+    private Button btnTest2;
+    private Button btnTest3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        myButton = (MyButton) findViewById(R.id.btn_event);
-        myLayout = (MyRelativeLayout) findViewById(R.id.rl_event);
+        btnTest1 = (Button) findViewById(R.id.btn_test1);
+        btnTest2 = (Button) findViewById(R.id.btn_test2);
+        btnTest3 = (Button) findViewById(R.id.btn_test3);
 
-        myButton.setOnClickListener(this);
-        myLayout.setOnClickListener(this);
-        myButton.setOnTouchListener(this);
-        myLayout.setOnTouchListener(this);
+        btnTest1.setOnClickListener(this);
+        btnTest2.setOnClickListener(this);
+        btnTest3.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        Log.i("zyf", "onClickListener====" + v.getId());
-    }
-
-    @Override
-    public boolean onTouch(View v, MotionEvent event) {
-        Log.i("zyf", "onTouchListener====" + event.getAction() + "====" + v.getId());
-        return false;
+        switch (v.getId()) {
+            case R.id.btn_test1:
+                startActivity(new Intent(MainActivity.this, Test1Activity.class));
+                break;
+            case R.id.btn_test2:
+                startActivity(new Intent(MainActivity.this, Test2Activity.class));
+                break;
+            case R.id.btn_test3:
+                startActivity(new Intent(MainActivity.this, Test3Activity.class));
+                break;
+        }
     }
 }
