@@ -4,7 +4,7 @@
   * ViewGroup和View的分发机制
   * ScrollView和ListView冲突处理
   * ViewPager简单实现
- 如果想详细了解，可以查看我的一篇文章[高级UI--事件处理（六）](http://www.jianshu.com/p/0746f5b4bc36)
+如果想详细了解，可以查看我的一篇文章[高级UI--事件处理（六）](http://www.jianshu.com/p/0746f5b4bc36)
 
 
 #关于作者
